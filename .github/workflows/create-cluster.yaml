@@ -28,7 +28,7 @@ jobs:
           fetch-depth: 0
       - name: Create Cluster
         run: |
-          ./scripts/create-cluster.sh ${{ inputs.name }} ${{ inputs.provider }} ${{ .inputs.cluster }} ${{ .inputs.nodeSize}}
+          ./scripts/create-cluster.sh ${{ inputs.name }} ${{ inputs.provider }} ${{ inputs.cluster }} ${{ inputs.nodeSize}}
       - name: Commit Changes
         run: |
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
