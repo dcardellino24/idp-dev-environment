@@ -15,7 +15,7 @@ else
   cp crossplane/cluster-template.yaml $FILE_PATH/cluster.yaml
 fi
 
-yq --inplace ".metadata.name = \"${NAME}-$(cat /dev/urandom | LC_ALL=C tr -dc 'a-z0-9' | fold -w 5 | head -n 1)\"" $FILE_PATH/cluster.yaml
+yq --inplace ".metadata.name = \"${NAME}\"" $FILE_PATH/cluster.yaml
 yq --inplace ".spec.id = \"${NAME}\"" $FILE_PATH/cluster.yaml
 yq --inplace ".spec.compositionSelector.matchLabels.provider = \"${PROVIDER}\"" $FILE_PATH/cluster.yaml
 yq --inplace ".spec.compositionSelector.matchLabels.cluster = \"${CLUSTER}\"" $FILE_PATH/cluster.yaml
