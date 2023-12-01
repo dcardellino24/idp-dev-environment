@@ -1,0 +1,15 @@
+---
+apiVersion: devopstoolkitseries.com/v1alpha1
+kind: ClusterClaim
+metadata:
+  name: brathuhn
+  namespace: infra
+spec:
+  id: brathuhn
+  compositionSelector:
+    matchLabels:
+      provider: civo
+      cluster: ck-all
+  parameters:
+    nodeSize: ""
+    minNodeCount: 1
