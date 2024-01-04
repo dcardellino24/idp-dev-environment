@@ -1,0 +1,30 @@
+apiVersion: gcp.platformref.ds24.io/v1alpha1
+kind: Cluster
+metadata:
+  name: dc23
+  namespace: dc23
+spec:
+  compositionSelector:
+    matchLabels:
+      provider: GCP
+      cluster: dc23
+  location: europe-west3
+  locationshort: euw3
+  environment: dc23
+  project:
+    id: dd333
+    services:
+      - compute.googleapis.com
+      - dns.googleapis.com
+      - file.googleapis.com
+      - servicenetworking.googleapis.com
+      - cloudkms.googleapis.com
+      - certificatemanager.googleapis.com
+      - secretmanager.googleapis.com
+      - iap.googleapis.com
+      - redis.googleapis.com
+  parameters:
+    kubernetes:
+      nodes:
+        size: small
+        count: "1"

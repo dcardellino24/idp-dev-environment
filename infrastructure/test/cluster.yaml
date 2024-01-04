@@ -1,0 +1,15 @@
+apiVersion: gcp.platformref.ds25.io/v1alpha1
+kind: Cluster
+metadata:
+  name: test
+  namespace: infra
+spec:
+  id: test
+  compositionSelector:
+    matchLabels:
+      provider: PROVIDER
+      cluster: cluster
+  parameters:
+    nodeSize: small
+    minNodeCount: 1
+  random: af34c
