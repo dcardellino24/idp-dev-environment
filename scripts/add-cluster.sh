@@ -25,7 +25,7 @@ yq --inplace ".spec.environment = \"${cluster_name}\"" $filepath/$cluster_name/c
 yq --inplace ".spec.location = \"${location}\"" $filepath/$cluster_name/cluster.yaml
 yq --inplace ".spec.compositionSelector.matchLabels.cluster = \"${cluster_name}\"" $filepath/$cluster_name/cluster.yaml
 yq --inplace ".spec.kubernetes.nodes.size = \"${nodesize}\"" $filepath/$cluster_name/cluster.yaml
-yq --inplace ".spec.kubernetes.nodes.count = \"${nodecount}\"" $filepath/$cluster_name/cluster.yaml
+yq --inplace ".spec.kubernetes.nodes.count = ${nodecount}" $filepath/$cluster_name/cluster.yaml
 
 
 yq --inplace ".resources += [\"$cluster_name\"]" $filepath/kustomization.yaml
