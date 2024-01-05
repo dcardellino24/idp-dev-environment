@@ -7,7 +7,6 @@ spec:
     matchLabels:
       provider: GCP
   location: europe-west3
-  locationshort:
   environment: sandbox-dc6
   project:
     id: f9db9
