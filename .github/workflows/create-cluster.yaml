@@ -27,7 +27,7 @@ jobs:
         uses: chrisdickinson/setup-yq@latest
       - name: Create Cluster
         run: |
-          ./scripts/add-cluster.sh ${{ inputs.name }} ${{ inputs.provider }} ${{ inputs.cluster }} ${{ inputs.nodeSize}}
+          ./scripts/add-cluster.sh ${{ inputs.cluster_name }} ${{ inputs.location }} ${{ inputs.node_size }} ${{ inputs.node_count }}
       - name: Commit Changes
         run: |
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
