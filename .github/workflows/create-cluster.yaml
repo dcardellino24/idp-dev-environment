@@ -2,33 +2,32 @@ name: Create a cluster
 on:
   workflow_dispatch:
     inputs:
-      name:
+      cluster_name:
         required: true
         description: "The name of the cluster"
-      provider:
+      location:
         required: true
-        description: "The provider where the cluster is hosted"
-        default: "civo"
-      cluster:
-        required: true
-        description: "The type of the cluster"
-        default: "ck-all"
-      node-size:
+        description: "The location of the cluster"
+        default: "europe-west3"
+      node_size:
         required: true
         description: "The size of the nodes"
         default: "small"
+      node_count:
+        required: true
+        description: "The count of nodes in the new cluster"
+        default: "1"
 
 jobs:
   deploy-app:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-        with:
-          persist-credentials: false
-          fetch-depth: 0
+      - uses: actions/checkout@v4
+      - name: Setup yq
+        uses: chrisdickinson/setup-yq@latest
       - name: Create Cluster
         run: |
-          ./scripts/create-cluster.sh ${{ inputs.name }} ${{ inputs.provider }} ${{ inputs.cluster }} ${{ inputs.nodeSize}}
+          ./scripts/add-cluster.sh ${{ inputs.name }} ${{ inputs.provider }} ${{ inputs.cluster }} ${{ inputs.nodeSize}}
       - name: Commit Changes
         run: |
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
