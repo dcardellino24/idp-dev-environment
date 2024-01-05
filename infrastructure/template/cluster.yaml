@@ -1,0 +1,28 @@
+apiVersion: gcp.platformref.dc24.io/v1alpha1
+kind: Cluster
+metadata:
+  name:
+  namespace:
+spec:
+  compositionSelector:
+    matchLabels:
+      provider: GCP
+  location:
+  locationshort:
+  environment:
+  project:
+    id:
+    services:
+      - compute.googleapis.com
+      - dns.googleapis.com
+      - file.googleapis.com
+      - servicenetworking.googleapis.com
+      - cloudkms.googleapis.com
+      - certificatemanager.googleapis.com
+      - secretmanager.googleapis.com
+      - iap.googleapis.com
+      - redis.googleapis.com
+  kubernetes:
+    nodes:
+      count:
+      size:
