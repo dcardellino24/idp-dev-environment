@@ -24,7 +24,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Setup yq
-        uses: chrisdickinson/setup-yq@latest
+        uses: frenck/action-setup-yq@v1
       - name: Create Cluster
         run: |
           ./scripts/add-cluster.sh ${{ inputs.cluster_name }} ${{ inputs.location }} ${{ inputs.node_size }} ${{ inputs.node_count }}
