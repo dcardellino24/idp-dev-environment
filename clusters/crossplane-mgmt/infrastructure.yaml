@@ -2,12 +2,12 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
-  name: clusters-config
+  name: infrastructure
   namespace: flux-system
 spec:
   prune: true
   interval: 2m0s
-  path: ./gitops-system/clusters-config
+  path: ./infrastructure
   sourceRef:
     kind: GitRepository
     name: flux-system
