@@ -6,7 +6,6 @@ spec:
   compositionSelector:
     matchLabels:
       provider: GCP
-      cluster: sandbox-dc6
   location: europe-west3
   locationshort:
   environment: sandbox-dc6
