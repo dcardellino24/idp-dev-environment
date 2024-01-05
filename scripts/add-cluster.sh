@@ -20,7 +20,6 @@ else
 fi
 
 yq --inplace ".metadata.name = \"${cluster_name}\"" $filepath/$cluster_name/cluster.yaml
-yq --inplace ".metadata.namespace = \"${cluster_name}\"" $filepath/$cluster_name/cluster.yaml
 yq --inplace ".spec.environment = \"${cluster_name}\"" $filepath/$cluster_name/cluster.yaml
 yq --inplace ".spec.location = \"${location}\"" $filepath/$cluster_name/cluster.yaml
 yq --inplace ".spec.compositionSelector.matchLabels.cluster = \"${cluster_name}\"" $filepath/$cluster_name/cluster.yaml
