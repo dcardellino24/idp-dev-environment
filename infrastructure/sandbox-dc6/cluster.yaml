@@ -25,5 +25,5 @@ spec:
       - redis.googleapis.com
   kubernetes:
     nodes:
-      count: "1"
+      count: 3
       size: small
