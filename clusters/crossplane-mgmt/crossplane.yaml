@@ -8,28 +8,7 @@ spec:
   prune: true
   force: true
   interval: 3m0s
-  path: ./gitops-system/tools/crossplane
+  path: ./tools/crossplane
   sourceRef:
     kind: GitRepository
     name: flux-system
-  # healthChecks:
-  #   - apiVersion: batch/v1
-  #     kind: Job
-  #     name: k8s-provider-config-job
-  #     namespace: crossplane-system
-  # validation: client
-  # patches:
-  #   - target:
-  #       group: kustomize.toolkit.fluxcd.io
-  #       kind: Kustomization
-  #       version: v1beta2
-  #       name: crossplane-aws-provider
-  #       namespace: flux-system
-  #     patch: |-
-  #       - op: add
-  #         path: /spec/postBuild
-  #         value:
-  #           substituteFrom:
-  #             - kind: ConfigMap
-  #               name: cluster-info
-  #               optional: false
