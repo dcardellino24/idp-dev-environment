@@ -1,3 +1,4 @@
+---
 apiVersion: gcp.platformref.dc24.io/v1alpha1
 kind: Cluster
 metadata:
@@ -9,7 +10,7 @@ spec:
   location: europe-west3
   environment: sandbox-dc6
   project:
-    id: f9db9
+    id: f9db
     services:
       - compute.googleapis.com
       - dns.googleapis.com
