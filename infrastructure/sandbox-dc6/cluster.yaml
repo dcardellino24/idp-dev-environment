@@ -3,6 +3,7 @@ apiVersion: gcp.platformref.dc24.io/v1alpha1
 kind: Cluster
 metadata:
   name: sandbox-dc6
+  namespace: default
 spec:
   compositionSelector:
     matchLabels:
