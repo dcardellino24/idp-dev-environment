@@ -1,0 +1,28 @@
+apiVersion: gcp.platformref.dc24.io/v1alpha1
+kind: Cluster
+metadata:
+  name: sandbox-dc2
+  namespace: sandbox-dc2
+spec:
+  compositionSelector:
+    matchLabels:
+      provider: GCP
+      cluster: sandbox-dc2
+  location: europe-west3
+  environment: sandbox-dc2
+  project:
+    id: 9dcd0
+    services:
+      - compute.googleapis.com
+      - dns.googleapis.com
+      - file.googleapis.com
+      - servicenetworking.googleapis.com
+      - cloudkms.googleapis.com
+      - certificatemanager.googleapis.com
+      - secretmanager.googleapis.com
+      - iap.googleapis.com
+      - redis.googleapis.com
+  kubernetes:
+    nodes:
+      count: 1
+      size: small
