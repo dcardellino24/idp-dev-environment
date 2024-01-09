@@ -16,6 +16,7 @@ spec:
       - dns.googleapis.com
       - file.googleapis.com
       - servicenetworking.googleapis.com
+      - container.googleapis.com
       - cloudkms.googleapis.com
       - certificatemanager.googleapis.com
       - secretmanager.googleapis.com
