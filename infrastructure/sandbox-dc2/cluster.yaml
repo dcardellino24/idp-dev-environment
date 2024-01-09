@@ -7,7 +7,6 @@ spec:
   compositionSelector:
     matchLabels:
       provider: GCP
-      cluster: sandbox-dc2
   location: europe-west3
   environment: sandbox-dc2
   project:
