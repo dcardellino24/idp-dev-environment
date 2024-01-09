@@ -26,3 +26,5 @@ spec:
     nodes:
       count: 1
       size: small
+  writeConnectionSecretToRef:
+    namespace: flux-system
